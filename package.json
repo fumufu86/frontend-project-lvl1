@@ -1,0 +1,19 @@
+{
+  "name": "frontend-project-lvl1",
+  "version": "1.0.0",
+  "description": "Hexlet-frontend-project-lvl1",
+  "main": "./src/bin/brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fumufu86/frontend-project-lvl1.git"
+  },
+  "author": "fumufu86",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fumufu86/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/fumufu86/frontend-project-lvl1#readme"
+}
