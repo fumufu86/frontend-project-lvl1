@@ -9,3 +9,4 @@
 ```sh
 $ make install
 ``` 
+https://asciinema.org/a/uGbtmJrFZ7eMhSbhhUDCLEQpd
