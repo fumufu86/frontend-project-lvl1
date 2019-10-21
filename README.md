@@ -15,6 +15,6 @@ Install and play brain-even
 https://asciinema.org/a/uGbtmJrFZ7eMhSbhhUDCLEQpd
 
 ```
-Instal and play brain-calc
+Install and play brain-calc
 ```
 https://asciinema.org/a/mzKH79oNHCaHitsJjT4bKtv1P
