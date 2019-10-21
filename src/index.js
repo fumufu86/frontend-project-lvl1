@@ -7,9 +7,9 @@ const getcorrectanswer = (qa) => cdr(qa);
 
 const playgame = (rules, qanda) => {
   console.log('Welcome to the Brain Games!');
+  console.log(rules);
   const actual = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${actual}!`);
-  console.log(rules);
   for (let count = countround; count > 0; count -= 1) {
     const getQandA = qanda();
     const question = getquestion(getQandA);
