@@ -11,9 +11,10 @@ $ make install
 ``` 
 ```
 Install and play brain-even
-https://asciinema.org/a/uGbtmJrFZ7eMhSbhhUDCLEQpd
 ```
+https://asciinema.org/a/uGbtmJrFZ7eMhSbhhUDCLEQpd
+
 ```
 Instal and play brain-calc
-https://asciinema.org/a/mzKH79oNHCaHitsJjT4bKtv1P
 ```
+https://asciinema.org/a/mzKH79oNHCaHitsJjT4bKtv1P
