@@ -17,7 +17,7 @@ const gcd = (a, b) => {
   return iter(small);
 };
 
-const rules = 'What is the result of the expression?';
+const rules = 'Find the greatest common divisor of given numbers.';
 
 
 const qanda = () => {
