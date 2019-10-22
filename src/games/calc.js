@@ -4,7 +4,7 @@ import generateNumber from '../utils';
 
 
 const minrandom = 1;
-const maxrandom = 9;
+const maxrandom = 99;
 const operand = '+-*';
 
 
