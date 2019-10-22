@@ -18,3 +18,8 @@ https://asciinema.org/a/uGbtmJrFZ7eMhSbhhUDCLEQpd
 Install and play brain-calc
 ```
 https://asciinema.org/a/mzKH79oNHCaHitsJjT4bKtv1P
+
+```
+Install and play brain-gcd
+```
+https://asciinema.org/a/xgfwxfZ3LizMB5ONaGCOBtkFe
