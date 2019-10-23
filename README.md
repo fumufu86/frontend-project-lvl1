@@ -28,3 +28,8 @@ https://asciinema.org/a/xgfwxfZ3LizMB5ONaGCOBtkFe
 Install and play brain-progression
 ```
 https://asciinema.org/a/1I31eItChipTHdyujfjrdc5x3
+
+```
+Install and play brain-prime
+```
+https://asciinema.org/a/5ExBaDf2zC0rSmPP599ibocrM
