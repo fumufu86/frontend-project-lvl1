@@ -1,12 +1,12 @@
 import { cons } from 'hexlet-pairs';
-import playgame from '..';
+import playGame from '..';
 import generateNumber from '../utils';
 
 
 const minrandom = 1;
 const maxrandom = 99;
 
-const prime = (num) => {
+const isPrime = (num) => {
   if (num <= 2) return (num === 2) ? 'yes' : 'no';
   const iter = (counter) => {
     if (num % counter === 0) return 'no';
@@ -16,14 +16,14 @@ const prime = (num) => {
   return iter(2);
 };
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const RulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 
-const qanda = () => {
-  const question = generateNumber(minrandom, maxrandom);
-  const answer = prime(question);
-  return cons(question, answer);
+const QuestionAndAnswer = () => {
+  const Question = generateNumber(minrandom, maxrandom);
+  const CorrectAnswer = isPrime(Question);
+  return cons(Question, CorrectAnswer);
 };
 
-const gameprime = () => playgame(rules, qanda);
-export default gameprime;
+const playPrime = () => playGame(RulesOfTheGame, QuestionAndAnswer);
+export default playPrime;

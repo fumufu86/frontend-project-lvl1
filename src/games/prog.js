@@ -1,32 +1,32 @@
 import { cons } from 'hexlet-pairs';
-import playgame from '..';
+import playGame from '..';
 import generateNumber from '../utils';
 
 
 const minrandom = 1;
 const maxrandom = 9;
-const proglength = 10;
+const ProgressionLineLength = 10;
 
-const progline = (first, pos, step) => {
-  const iter = (counter, acc) => {
-    if (proglength === counter) return acc;
-    const nextnum = (counter === pos) ? '..' : String(first + (counter * step));
-    return iter(counter + 1, `${acc} ${nextnum}`);
+const genProgressionLine = (firstNumOfProgression, MysteriousPosition, ProgressionStep) => {
+  const iter = (counter, ProgressionLine) => {
+    if (ProgressionLineLength === counter) return ProgressionLine;
+    const nextnum = (counter === MysteriousPosition) ? '..' : String(firstNumOfProgression + (counter * ProgressionStep));
+    return iter(counter + 1, `${ProgressionLine} ${nextnum}`);
   };
-  return iter(1, `${first}`);
+  return iter(1, `${firstNumOfProgression}`);
 };
 
-const rules = 'What number is missing in the progression?';
+const RulesOfTheGame = 'What number is missing in the progression?';
 
 
-const qanda = () => {
-  const startnum = generateNumber(minrandom, maxrandom);
-  const position = generateNumber(minrandom, maxrandom);
-  const stepprog = generateNumber(minrandom, maxrandom);
-  const question = progline(startnum, position, stepprog);
-  const answer = String(startnum + (position * stepprog));
-  return cons(question, answer);
+const QuestionAndAnswer = () => {
+  const firstNumOfProgression = generateNumber(minrandom, maxrandom);
+  const MysteriousPosition = generateNumber(minrandom, maxrandom);
+  const ProgressionStep = generateNumber(minrandom, maxrandom);
+  const Question = genProgressionLine(firstNumOfProgression, MysteriousPosition, ProgressionStep);
+  const CorrectAnswer = String(firstNumOfProgression + (MysteriousPosition * ProgressionStep));
+  return cons(Question, CorrectAnswer);
 };
 
-const gamegcd = () => playgame(rules, qanda);
-export default gamegcd;
+const playProgression = () => playGame(RulesOfTheGame, QuestionAndAnswer);
+export default playProgression;

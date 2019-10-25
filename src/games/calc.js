@@ -1,27 +1,27 @@
 import { cons } from 'hexlet-pairs';
-import playgame from '..';
+import playGame from '..';
 import generateNumber from '../utils';
 
 
 const minrandom = 1;
 const maxrandom = 99;
-const operand = '+-*';
+const operandString = '+-*';
 
 
-const rules = 'What is the result of the expression?';
+const RulesOfTheGame = 'What is the result of the expression?';
 
 
-const qanda = () => {
-  const firstnumber = generateNumber(minrandom, maxrandom);
-  const lasttnumber = generateNumber(minrandom, maxrandom);
-  const generateoperand = generateNumber(0, 2);
-  const question = `${firstnumber} ${operand[generateoperand]} ${lasttnumber}`;
-  let answer;
-  if (generateoperand === 0) answer = String(firstnumber + lasttnumber);
-  if (generateoperand === 1) answer = String(firstnumber - lasttnumber);
-  if (generateoperand === 2) answer = String(firstnumber * lasttnumber);
-  return cons(question, answer);
+const QuestionAndAnswer = () => {
+  const FirstNumber = generateNumber(minrandom, maxrandom);
+  const LastNumber = generateNumber(minrandom, maxrandom);
+  const Operand = generateNumber(0, 2);
+  const Question = `${FirstNumber} ${operandString[Operand]} ${LastNumber}`;
+  let CorrectAnswer;
+  if (Operand === 0) CorrectAnswer = String(FirstNumber + LastNumber);
+  if (Operand === 1) CorrectAnswer = String(FirstNumber - LastNumber);
+  if (Operand === 2) CorrectAnswer = String(FirstNumber * LastNumber);
+  return cons(Question, CorrectAnswer);
 };
 
-const gamecalc = () => playgame(rules, qanda);
-export default gamecalc;
+const playCalc = () => playGame(RulesOfTheGame, QuestionAndAnswer);
+export default playCalc;

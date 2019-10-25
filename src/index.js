@@ -1,28 +1,28 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-const countround = 3;
-const getquestion = (qa) => car(qa);
-const getcorrectanswer = (qa) => cdr(qa);
+const roundCount = 3;
+const getQuestion = (QuestionAndAnswer) => car(QuestionAndAnswer);
+const getCorrectAnswer = (QuestionAndAnswer) => cdr(QuestionAndAnswer);
 
-const playgame = (rules, qanda) => {
+const playGame = (RulesOfTheGame, QuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
-  console.log(rules);
-  const actual = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${actual}!`);
-  for (let count = countround; count > 0; count -= 1) {
-    const getQandA = qanda();
-    const question = getquestion(getQandA);
-    const correctanswer = getcorrectanswer(getQandA);
-    console.log(`Question: ${question}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (correctanswer !== answer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctanswer}'.`);
-      console.log(`Let's try again, ${actual}!`);
+  console.log(RulesOfTheGame);
+  const PlayerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${PlayerName}!`);
+  for (let count = roundCount; count > 0; count -= 1) {
+    const getQuestionAndAnswer = QuestionAndAnswer();
+    const Question = getQuestion(getQuestionAndAnswer);
+    const CorrectAnswer = getCorrectAnswer(getQuestionAndAnswer);
+    console.log(`Question: ${Question}`);
+    const PlayerAnswer = readlineSync.question('Your answer: ');
+    if (CorrectAnswer !== PlayerAnswer) {
+      console.log(`'${PlayerAnswer}' is wrong answer ;(. Correct answer was '${CorrectAnswer}'.`);
+      console.log(`Let's try again, ${PlayerName}!`);
       return;
     }
     console.log('Correct!');
   }
-  console.log(`Congratulations, ${actual}!`);
+  console.log(`Congratulations, ${PlayerName}!`);
 };
-export default playgame;
+export default playGame;
