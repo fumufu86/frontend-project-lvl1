@@ -7,23 +7,23 @@ const minrandom = 1;
 const maxrandom = 99;
 
 const isPrime = (num) => {
-  if (num <= 2) return (num === 2) ? 'yes' : 'no';
+  if (num <= 2) return num === 2;
   const iter = (counter) => {
-    if (num % counter === 0) return 'no';
-    if (counter > (num / 2)) return 'yes';
+    if (num % counter === 0) return false;
+    if (counter > (num / 2)) return true;
     return iter(counter + 1);
   };
   return iter(2);
 };
 
-const RulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const rulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 
 const genQuestionAndAnswer = () => {
-  const Question = generateNumber(minrandom, maxrandom);
-  const CorrectAnswer = isPrime(Question);
-  return cons(Question, CorrectAnswer);
+  const question = generateNumber(minrandom, maxrandom);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+  return cons(question, correctAnswer);
 };
 
-const playPrime = () => playGame(RulesOfTheGame, genQuestionAndAnswer);
+const playPrime = () => playGame(rulesOfTheGame, genQuestionAndAnswer);
 export default playPrime;

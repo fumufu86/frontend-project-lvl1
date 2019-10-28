@@ -6,10 +6,10 @@ import generateNumber from '../utils';
 const minrandom = 1;
 const maxrandom = 9;
 
-const getGreatestCommonDivisor = (FirstNumber, LastNumber) => {
-  const large = (FirstNumber > LastNumber) ? FirstNumber : LastNumber;
-  const small = (LastNumber < FirstNumber) ? LastNumber : FirstNumber;
-  if (FirstNumber === 1 || LastNumber === 1) return 1;
+const getGreatestCommonDivisor = (first, last) => {
+  const large = (first > last) ? first : last;
+  const small = (last < first) ? last : first;
+  if (first === 1 || last === 1) return 1;
   const iter = (acc) => {
     if (large % acc === 0 && small % acc === 0) return acc;
     return iter(acc - 1);
@@ -17,16 +17,16 @@ const getGreatestCommonDivisor = (FirstNumber, LastNumber) => {
   return iter(small);
 };
 
-const RulesOfTheGame = 'Find the greatest common divisor of given numbers.';
+const rulesOfTheGame = 'Find the greatest common divisor of given numbers.';
 
 
 const genQuestionAndAnswer = () => {
-  const FirstNumber = generateNumber(minrandom, maxrandom);
-  const LastNumber = generateNumber(minrandom, maxrandom);
-  const Question = `${FirstNumber} ${LastNumber}`;
-  const CorrectAnswer = String(getGreatestCommonDivisor(FirstNumber, LastNumber));
-  return cons(Question, CorrectAnswer);
+  const first = generateNumber(minrandom, maxrandom);
+  const last = generateNumber(minrandom, maxrandom);
+  const question = `${first} ${last}`;
+  const correctAnswer = String(getGreatestCommonDivisor(first, last));
+  return cons(question, correctAnswer);
 };
 
-const playGreatestCommonDivisor = () => playGame(RulesOfTheGame, genQuestionAndAnswer);
+const playGreatestCommonDivisor = () => playGame(rulesOfTheGame, genQuestionAndAnswer);
 export default playGreatestCommonDivisor;

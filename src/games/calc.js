@@ -8,28 +8,28 @@ const maxrandom = 99;
 const operandString = '+-*';
 
 
-const RulesOfTheGame = 'What is the result of the expression?';
+const rulesOfTheGame = 'What is the result of the expression?';
 
 
 const genQuestionAndAnswer = () => {
-  const FirstNumber = generateNumber(minrandom, maxrandom);
-  const LastNumber = generateNumber(minrandom, maxrandom);
-  const Operand = operandString[generateNumber(0, 2)];
-  const Question = `${FirstNumber} ${Operand} ${LastNumber}`;
-  let CorrectAnswer;
-  switch (Operand) {
+  const first = generateNumber(minrandom, maxrandom);
+  const last = generateNumber(minrandom, maxrandom);
+  const operand = operandString[generateNumber(0, 2)];
+  const question = `${first} ${operand} ${last}`;
+  let correctAnswer;
+  switch (operand) {
     case '+':
-      CorrectAnswer = String(FirstNumber + LastNumber);
+      correctAnswer = String(first + last);
       break;
     case '-':
-      CorrectAnswer = String(FirstNumber - LastNumber);
+      correctAnswer = String(first - last);
       break;
     default:
-      CorrectAnswer = String(FirstNumber * LastNumber);
+      correctAnswer = String(first * last);
       break;
   }
-  return cons(Question, CorrectAnswer);
+  return cons(question, correctAnswer);
 };
 
-const playCalc = () => playGame(RulesOfTheGame, genQuestionAndAnswer);
+const playCalc = () => playGame(rulesOfTheGame, genQuestionAndAnswer);
 export default playCalc;
