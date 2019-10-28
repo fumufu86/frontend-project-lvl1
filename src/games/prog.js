@@ -19,7 +19,7 @@ const genProgressionLine = (firstNumOfProgression, MysteriousPosition, Progressi
 const RulesOfTheGame = 'What number is missing in the progression?';
 
 
-const QuestionAndAnswer = () => {
+const genQuestionAndAnswer = () => {
   const firstNumOfProgression = generateNumber(minrandom, maxrandom);
   const MysteriousPosition = generateNumber(minrandom, maxrandom);
   const ProgressionStep = generateNumber(minrandom, maxrandom);
@@ -28,5 +28,5 @@ const QuestionAndAnswer = () => {
   return cons(Question, CorrectAnswer);
 };
 
-const playProgression = () => playGame(RulesOfTheGame, QuestionAndAnswer);
+const playProgression = () => playGame(RulesOfTheGame, genQuestionAndAnswer);
 export default playProgression;

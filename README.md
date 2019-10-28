@@ -7,29 +7,35 @@
 ## Setup
 
 ```sh
-$ make install
-``` 
+make install
+```
+
 ```
 Install and play brain-even
 ```
-https://asciinema.org/a/uGbtmJrFZ7eMhSbhhUDCLEQpd
+
+<https://asciinema.org/a/uGbtmJrFZ7eMhSbhhUDCLEQpd>
 
 ```
 Install and play brain-calc
 ```
-https://asciinema.org/a/mzKH79oNHCaHitsJjT4bKtv1P
+
+<https://asciinema.org/a/mzKH79oNHCaHitsJjT4bKtv1P>
 
 ```
 Install and play brain-gcd
 ```
-https://asciinema.org/a/xgfwxfZ3LizMB5ONaGCOBtkFe
+
+<https://asciinema.org/a/xgfwxfZ3LizMB5ONaGCOBtkFe>
 
 ```
 Install and play brain-progression
 ```
-https://asciinema.org/a/1I31eItChipTHdyujfjrdc5x3
+
+<https://asciinema.org/a/1I31eItChipTHdyujfjrdc5x3>
 
 ```
 Install and play brain-prime
 ```
-https://asciinema.org/a/5ExBaDf2zC0rSmPP599ibocrM
+
+<https://asciinema.org/a/5ExBaDf2zC0rSmPP599ibocrM>

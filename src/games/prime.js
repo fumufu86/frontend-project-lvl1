@@ -19,11 +19,11 @@ const isPrime = (num) => {
 const RulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 
-const QuestionAndAnswer = () => {
+const genQuestionAndAnswer = () => {
   const Question = generateNumber(minrandom, maxrandom);
   const CorrectAnswer = isPrime(Question);
   return cons(Question, CorrectAnswer);
 };
 
-const playPrime = () => playGame(RulesOfTheGame, QuestionAndAnswer);
+const playPrime = () => playGame(RulesOfTheGame, genQuestionAndAnswer);
 export default playPrime;

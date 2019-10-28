@@ -11,7 +11,7 @@ const operandString = '+-*';
 const RulesOfTheGame = 'What is the result of the expression?';
 
 
-const QuestionAndAnswer = () => {
+const genQuestionAndAnswer = () => {
   const FirstNumber = generateNumber(minrandom, maxrandom);
   const LastNumber = generateNumber(minrandom, maxrandom);
   const Operand = operandString[generateNumber(0, 2)];
@@ -31,5 +31,5 @@ const QuestionAndAnswer = () => {
   return cons(Question, CorrectAnswer);
 };
 
-const playCalc = () => playGame(RulesOfTheGame, QuestionAndAnswer);
+const playCalc = () => playGame(RulesOfTheGame, genQuestionAndAnswer);
 export default playCalc;

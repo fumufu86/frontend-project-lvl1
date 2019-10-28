@@ -20,7 +20,7 @@ const getGreatestCommonDivisor = (FirstNumber, LastNumber) => {
 const RulesOfTheGame = 'Find the greatest common divisor of given numbers.';
 
 
-const QuestionAndAnswer = () => {
+const genQuestionAndAnswer = () => {
   const FirstNumber = generateNumber(minrandom, maxrandom);
   const LastNumber = generateNumber(minrandom, maxrandom);
   const Question = `${FirstNumber} ${LastNumber}`;
@@ -28,5 +28,5 @@ const QuestionAndAnswer = () => {
   return cons(Question, CorrectAnswer);
 };
 
-const playGreatestCommonDivisor = () => playGame(RulesOfTheGame, QuestionAndAnswer);
+const playGreatestCommonDivisor = () => playGame(RulesOfTheGame, genQuestionAndAnswer);
 export default playGreatestCommonDivisor;

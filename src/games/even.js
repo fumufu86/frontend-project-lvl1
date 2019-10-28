@@ -10,11 +10,11 @@ const isEven = (num) => num % 2 === 0;
 const RulesOfTheGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // quanda is question and answer.
-const QuestionAndAnswer = () => {
+const genQuestionAndAnswer = () => {
   const Question = generateNumber(minrandom, maxrandom);
   const CorrectAnswer = isEven(Question) ? 'yes' : 'no';
   return cons(Question, CorrectAnswer);
 };
 
-const playEven = () => playGame(RulesOfTheGame, QuestionAndAnswer);
+const playEven = () => playGame(RulesOfTheGame, genQuestionAndAnswer);
 export default playEven;
