@@ -14,14 +14,14 @@ const RulesOfTheGame = 'What is the result of the expression?';
 const QuestionAndAnswer = () => {
   const FirstNumber = generateNumber(minrandom, maxrandom);
   const LastNumber = generateNumber(minrandom, maxrandom);
-  const Operand = generateNumber(0, 2);
-  const Question = `${FirstNumber} ${operandString[Operand]} ${LastNumber}`;
+  const Operand = operandString[generateNumber(0, 2)];
+  const Question = `${FirstNumber} ${Operand} ${LastNumber}`;
   let CorrectAnswer;
   switch (Operand) {
-    case 0:
+    case '+':
       CorrectAnswer = String(FirstNumber + LastNumber);
       break;
-    case 1:
+    case '-':
       CorrectAnswer = String(FirstNumber - LastNumber);
       break;
     default:
