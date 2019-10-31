@@ -3,18 +3,16 @@ import playGame from '..';
 import generateNumber from '../utils';
 
 
-const minrandom = 1;
-const maxrandom = 99;
-const operandString = '+-*';
+const minRandom = 1;
+const maxRandom = 99;
+const operands = '+-*';
 
+const description = 'What is the result of the expression?';
 
-const rulesOfTheGame = 'What is the result of the expression?';
-
-
-const genQuestionAndAnswer = () => {
-  const first = generateNumber(minrandom, maxrandom);
-  const last = generateNumber(minrandom, maxrandom);
-  const operand = operandString[generateNumber(0, 2)];
+const generateQuestionAndAnswer = () => {
+  const first = generateNumber(minRandom, maxRandom);
+  const last = generateNumber(minRandom, maxRandom);
+  const operand = operands[generateNumber(0, operands.length - 1)];
   const question = `${first} ${operand} ${last}`;
   let correctAnswer;
   switch (operand) {
@@ -31,5 +29,5 @@ const genQuestionAndAnswer = () => {
   return cons(question, correctAnswer);
 };
 
-const playCalc = () => playGame(rulesOfTheGame, genQuestionAndAnswer);
+const playCalc = () => playGame(description, generateQuestionAndAnswer);
 export default playCalc;

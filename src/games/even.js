@@ -3,18 +3,17 @@ import playGame from '..';
 import generateNumber from '../utils';
 
 
-const minrandom = 1;
-const maxrandom = 999;
+const minRandom = 1;
+const maxRandom = 999;
 const isEven = (num) => num % 2 === 0;
 
-const rulesOfTheGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-// quanda is question and answer.
-const genQuestionAndAnswer = () => {
-  const question = generateNumber(minrandom, maxrandom);
+const generateQuestionAndAnswer = () => {
+  const question = generateNumber(minRandom, maxRandom);
   const correctAnswer = isEven(question) ? 'yes' : 'no';
   return cons(question, correctAnswer);
 };
 
-const playEven = () => playGame(rulesOfTheGame, genQuestionAndAnswer);
+const playEven = () => playGame(description, generateQuestionAndAnswer);
 export default playEven;

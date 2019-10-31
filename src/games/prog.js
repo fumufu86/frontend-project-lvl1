@@ -3,30 +3,30 @@ import playGame from '..';
 import generateNumber from '../utils';
 
 
-const minrandom = 1;
-const maxrandom = 9;
+const minRandom = 1;
+const maxRandom = 9;
 const progressionLineLength = 10;
 
-const genProgressionLine = (firstNumOfProgression, mysteriousPosition, progressionStep) => {
+const generateProgressionLine = (first, mysteriousPosition, step) => {
   const iter = (counter, progressionLine) => {
     if (progressionLineLength === counter) return progressionLine;
-    const nextnum = (counter === mysteriousPosition) ? '..' : String(firstNumOfProgression + (counter * progressionStep));
+    const nextnum = (counter === mysteriousPosition) ? '..' : String(first + (counter * step));
     return iter(counter + 1, `${progressionLine} ${nextnum}`);
   };
-  return iter(1, `${firstNumOfProgression}`);
+  return iter(1, `${first}`);
 };
 
-const rulesOfTheGame = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 
-const genQuestionAndAnswer = () => {
-  const firstNumOfProgression = generateNumber(minrandom, maxrandom);
-  const mysteriousPosition = generateNumber(minrandom, maxrandom);
-  const progressionStep = generateNumber(minrandom, maxrandom);
-  const question = genProgressionLine(firstNumOfProgression, mysteriousPosition, progressionStep);
-  const correctAnswer = String(firstNumOfProgression + (mysteriousPosition * progressionStep));
+const generateQuestionAndAnswer = () => {
+  const first = generateNumber(minRandom, maxRandom);
+  const mysteriousPosition = generateNumber(minRandom, maxRandom);
+  const step = generateNumber(minRandom, maxRandom);
+  const question = generateProgressionLine(first, mysteriousPosition, step);
+  const correctAnswer = String(first + (mysteriousPosition * step));
   return cons(question, correctAnswer);
 };
 
-const playProgression = () => playGame(rulesOfTheGame, genQuestionAndAnswer);
+const playProgression = () => playGame(description, generateQuestionAndAnswer);
 export default playProgression;

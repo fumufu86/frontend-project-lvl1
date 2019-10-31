@@ -3,8 +3,8 @@ import playGame from '..';
 import generateNumber from '../utils';
 
 
-const minrandom = 1;
-const maxrandom = 99;
+const minRandom = 1;
+const maxRandom = 99;
 
 const isPrime = (num) => {
   if (num <= 2) return num === 2;
@@ -16,14 +16,13 @@ const isPrime = (num) => {
   return iter(2);
 };
 
-const rulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const genQuestionAndAnswer = () => {
-  const question = generateNumber(minrandom, maxrandom);
+  const question = generateNumber(minRandom, maxRandom);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return cons(question, correctAnswer);
 };
 
-const playPrime = () => playGame(rulesOfTheGame, genQuestionAndAnswer);
+const playPrime = () => playGame(description, genQuestionAndAnswer);
 export default playPrime;
