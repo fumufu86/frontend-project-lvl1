@@ -10,7 +10,7 @@ const playGame = (description, generateQuestionAndAnswer) => {
   console.log(description);
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
-  for (let count = 0; count === roundsCount; count += 1) {
+  for (let count = 0; count !== roundsCount; count += 1) {
     const getQuestionAndAnswer = generateQuestionAndAnswer();
     const question = getQuestion(getQuestionAndAnswer);
     const correctAnswer = getCorrectAnswer(getQuestionAndAnswer);
