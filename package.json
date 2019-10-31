@@ -1,8 +1,12 @@
 {
-  "name": "frontend-project-lvl1",
+  "name": "ubik-frontend-project-lvl1",
   "version": "1.0.0",
   "description": "Hexlet-frontend-project-lvl1",
-  "main": "dist/brain-games.js",
+  "keywords": [
+    "brain-games",
+    "games",
+    "hexlet"
+  ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
