@@ -27,6 +27,6 @@ const generateQuestionAndAnswer = () => {
   return makeQuestionAndAnswer(question, correctAnswer);
 };
 
-const playCalc = () => playGame(description, generateQuestionAndAnswer);
+const playCalculator = () => playGame(description, generateQuestionAndAnswer);
 
-export default playCalc;
+export default playCalculator;
