@@ -1,13 +1,12 @@
-import { cons } from 'hexlet-pairs';
 import playGame from '..';
-import generateNumber from '../utils';
+import { generateNumber, makeQuestionAndAnswer } from '../utils';
 
 
 const minRandom = 1;
 const maxRandom = 9;
 const progressionLineLength = 10;
 
-const generateProgressionLine = (first, mysteriousPosition, step) => {
+const generateQuestion = (first, mysteriousPosition, step) => {
   const iter = (counter, progressionLine) => {
     if (progressionLineLength === counter) return progressionLine;
     const nextnum = (counter === mysteriousPosition) ? '..' : String(first + (counter * step));
@@ -23,9 +22,9 @@ const generateQuestionAndAnswer = () => {
   const first = generateNumber(minRandom, maxRandom);
   const mysteriousPosition = generateNumber(minRandom, maxRandom);
   const step = generateNumber(minRandom, maxRandom);
-  const question = generateProgressionLine(first, mysteriousPosition, step);
+  const question = generateQuestion(first, mysteriousPosition, step);
   const correctAnswer = String(first + (mysteriousPosition * step));
-  return cons(question, correctAnswer);
+  return makeQuestionAndAnswer(question, correctAnswer);
 };
 
 const playProgression = () => playGame(description, generateQuestionAndAnswer);

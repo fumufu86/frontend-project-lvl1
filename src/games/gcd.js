@@ -1,6 +1,5 @@
-import { cons } from 'hexlet-pairs';
 import playGame from '..';
-import generateNumber from '../utils';
+import { generateNumber, makeQuestionAndAnswer } from '../utils';
 
 
 const minRandom = 1;
@@ -24,7 +23,7 @@ const generateQuestionAndAnswer = () => {
   const last = generateNumber(minRandom, maxRandom);
   const question = `${first} ${last}`;
   const correctAnswer = String(getGreatestCommonDivisor(first, last));
-  return cons(question, correctAnswer);
+  return makeQuestionAndAnswer(question, correctAnswer);
 };
 
 const playGreatestCommonDivisor = () => playGame(description, generateQuestionAndAnswer);

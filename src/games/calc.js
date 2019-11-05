@@ -1,6 +1,5 @@
-import { cons } from 'hexlet-pairs';
 import playGame from '..';
-import generateNumber from '../utils';
+import { generateNumber, makeQuestionAndAnswer } from '../utils';
 
 
 const minRandom = 1;
@@ -26,7 +25,7 @@ const generateQuestionAndAnswer = () => {
       correctAnswer = String(first * last);
       break;
   }
-  return cons(question, correctAnswer);
+  return makeQuestionAndAnswer(question, correctAnswer);
 };
 
 const playCalc = () => playGame(description, generateQuestionAndAnswer);
