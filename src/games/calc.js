@@ -1,7 +1,6 @@
 import playGame from '..';
 import { generateNumber, makeQuestionAndAnswer } from '../utils';
 
-
 const minRandom = 1;
 const maxRandom = 99;
 const operands = '+-*';
@@ -29,4 +28,5 @@ const generateQuestionAndAnswer = () => {
 };
 
 const playCalc = () => playGame(description, generateQuestionAndAnswer);
+
 export default playCalc;

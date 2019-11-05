@@ -1,7 +1,6 @@
 import playGame from '..';
 import { generateNumber, makeQuestionAndAnswer } from '../utils';
 
-
 const minRandom = 1;
 const maxRandom = 999;
 const isEven = (num) => num % 2 === 0;
@@ -15,4 +14,5 @@ const generateQuestionAndAnswer = () => {
 };
 
 const playEven = () => playGame(description, generateQuestionAndAnswer);
+
 export default playEven;

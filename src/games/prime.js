@@ -1,7 +1,6 @@
 import playGame from '..';
 import { generateNumber, makeQuestionAndAnswer } from '../utils';
 
-
 const minRandom = 1;
 const maxRandom = 99;
 
@@ -24,4 +23,5 @@ const genQuestionAndAnswer = () => {
 };
 
 const playPrime = () => playGame(description, genQuestionAndAnswer);
+
 export default playPrime;
