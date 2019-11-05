@@ -39,13 +39,13 @@
     "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
     "babel-eslint": "^10.0.3",
+    "change-case": "^3.1.0",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.18.2"
   },
   "dependencies": {
-    "change-case": "^3.1.0",
     "hexlet-pairs": "^1.0.8",
     "readline-sync": "^1.4.10",
     "source-map-support": "^0.5.13"
