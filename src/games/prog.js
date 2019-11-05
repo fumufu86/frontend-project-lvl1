@@ -1,7 +1,6 @@
 import playGame from '..';
 import { generateNumber, makeQuestionAndAnswer } from '../utils';
 
-
 const minRandom = 1;
 const maxRandom = 9;
 const progressionLineLength = 10;
@@ -16,7 +15,6 @@ const generateQuestion = (first, mysteriousPosition, step) => {
 };
 
 const description = 'What number is missing in the progression?';
-
 
 const generateQuestionAndAnswer = () => {
   const first = generateNumber(minRandom, maxRandom);
