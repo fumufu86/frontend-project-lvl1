@@ -23,4 +23,5 @@ const genQuestionAndAnswer = () => {
 };
 
 const playPrime = () => playGame(description, genQuestionAndAnswer);
+
 export default playPrime;

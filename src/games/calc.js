@@ -28,4 +28,5 @@ const generateQuestionAndAnswer = () => {
 };
 
 const playCalc = () => playGame(description, generateQuestionAndAnswer);
+
 export default playCalc;

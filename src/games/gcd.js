@@ -26,4 +26,5 @@ const generateQuestionAndAnswer = () => {
 };
 
 const playGreatestCommonDivisor = () => playGame(description, generateQuestionAndAnswer);
+
 export default playGreatestCommonDivisor;

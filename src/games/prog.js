@@ -26,4 +26,5 @@ const generateQuestionAndAnswer = () => {
 };
 
 const playProgression = () => playGame(description, generateQuestionAndAnswer);
+
 export default playProgression;

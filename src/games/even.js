@@ -14,4 +14,5 @@ const generateQuestionAndAnswer = () => {
 };
 
 const playEven = () => playGame(description, generateQuestionAndAnswer);
+
 export default playEven;
